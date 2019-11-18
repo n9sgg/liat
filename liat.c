@@ -90,15 +90,17 @@ int main(int argc, char **argv)
     while(1)
     {
 
-
         if( fp != NULL )
         {
-           fgets( buffer, MAX_LINE_LENGTH, fp);
+           if(fgets( buffer, MAX_LINE_LENGTH, fp) == NULL )   
+           {   
+             continue;
+           }
 
         }
         else 
         { 
-          fgets( buffer, MAX_LINE_LENGTH, stdin );
+            getstr(buffer);
         }
         
             /* push stack down */
@@ -107,7 +109,7 @@ int main(int argc, char **argv)
               strcpy( screen[ q ] , screen[ q - 1 ] );      
             }
           
-            /* Insert the word at the top of the stack */
+            /* Insert the line at the top of the stack */
             strcpy( screen[ 0 ] , buffer );
 
             /* Print output */
@@ -123,7 +125,6 @@ int main(int argc, char **argv)
               /* print the line */
               wprintw( stdscr, "%s" , screen[ x ] );
             
-
               /* Refresh the screen */
               wrefresh(stdscr);
             }
