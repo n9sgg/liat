@@ -59,7 +59,7 @@ int main(int argc, char **argv)
 
     initscr();
 
-    scrollok(stdscr, FALSE );
+    scrollok(stdscr, TRUE );
    
     getmaxyx(stdscr, height, width);
 
@@ -122,11 +122,11 @@ int main(int argc, char **argv)
                       
               /* print the line */
               wprintw( stdscr, "%s" , screen[ x ] );
-            }
+            
 
-            /* Refresh the screen */
-            wrefresh(stdscr);
-   
+              /* Refresh the screen */
+              wrefresh(stdscr);
+            }
     }
 
     endwin();
