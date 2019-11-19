@@ -6,13 +6,13 @@ liat \- List It At the Top
 .SH SYNOPSIS
 liat [FILE]
 .SH DESCRIPTION
-liat is an ncurses application that reads lines from FILE or stdin and prints the lines to the screen. The FILE is monitored and as the FILE grows the appended data is written to the screen. The top line of the screen is updated and the rest of the screen is scrolled down. The bottom line is lost each time the screen is full and the top line is updated.
+liat is an ncurses application that reads lines from  stdin and prints the lines to the screen. 
 .SH OPTIONS
-liat takes an optional FILE filename. If no FILE is given liat reads lines from stdin.
+There are no options
 .SH SEE ALSO
 tail
 .SH BUGS
-No known bugs. The maximun line length attempted to read is 1024 chars, including the newline and null terminator. The maximun number of lines available is 200. 
+No known bugs. The maximum line length attempted to read is 400 chars, including the newline and null terminator. The maximun number of lines available is 100. 
 .SH AUTHOR
 Steven Lamers (steve@stevenlamers.com)
 .SH COPYRIGHT
