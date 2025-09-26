@@ -1,14 +1,14 @@
 /* ***************************************************************************
 * liat.c
 * liat - List It At the Top
-* Written by: Steven G. Lamers 11-19-2019 - ALL RIGHTS RESERVED 2025
+* Author: Steven G. Lamers 11-19-2019 - ALL RIGHTS RESERVED 2025
 * Version: 3.0
 * History:
 *       1. First beta release - 04-30-2019
 *       2. Second release after testing the changes made from V1
 *       3. Changed back to read from stdin instead of file 09-25-2025
 *       
-* Usage: echo "foo" | liat 
+* Usage example: tail -f "foo" | liat 
 *
 * ************************************************************************* */
 
