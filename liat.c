@@ -1,7 +1,7 @@
 /* ***************************************************************************
 * liat.c
 * liat - List It At the Top
-* Written by: Steven G. Lamers - COPYRIGHT 11-19-2019 - ALL RIGHTS RESERVED
+* Written by: Steven G. Lamers 11-19-2019 - ALL RIGHTS RESERVED 2025
 * Version: 2.0
 * History:
 *       1. First beta release - 04-30-2019
