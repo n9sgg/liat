@@ -2,12 +2,14 @@
 * liat.c
 * liat - List It At the Top
 * Written by: Steven G. Lamers 11-19-2019 - ALL RIGHTS RESERVED 2025
-* Version: 2.0
+* Version: 3.0
 * History:
 *       1. First beta release - 04-30-2019
 *       2. Second release after testing the changes made from V1
-*       3. Changed backed to read from stdin instead of file 09-25-2025
+*       3. Changed back to read from stdin instead of file 09-25-2025
+*       
 * Usage: echo "foo" | liat 
+*
 * ************************************************************************* */
 
 #include <stdio.h>
@@ -24,12 +26,12 @@ void resizeHandler(int);
 char  screen[MAX_LINE_NUMBER][MAX_LINE_LENGTH];   /* The screen */
 int   height = 0, width = 0;
 
-int main(int argc, char **argv)
+void main(int argc, char **argv)
 {
 
+char  buffer[MAX_LINE_LENGTH] ;   /* line buffer   Quit if no arguments are passed. */
 int   x         = 0 ;
 int   q         = 0 ;
-char  buffer[MAX_LINE_LENGTH] ;   /* line buffer   /* Quit if no arguments are passed. */
 
   initscr();
 
@@ -46,41 +48,17 @@ char  buffer[MAX_LINE_LENGTH] ;   /* line buffer   /* Quit if no arguments are p
     clrtoeol();
 
     /* print the error */
-    wprintw( stdscr, "Sorry, the screen height is %d  the width is %d : MAX_LINE_NUMBER is %d and MAX_LINE_LENGTH is %d \n", 
-              height,
-              width, 
-              MAX_LINE_NUMBER,
-              MAX_LINE_LENGTH 
+   wprintw( stdscr, "Sorry, the screen height is %d  the width is %d : MAX_LINE_NUMBER is %d and MAX_LINE_LENGTH is %d \n", 
+             height,
+             width, 
+             MAX_LINE_NUMBER,
+             MAX_LINE_LENGTH 
             );
     
     /* Refresh the screen */
     wrefresh(stdscr);
-    
-    exit(1);
-  }
-
-  while(1)
-  {
-
-    if (fgets(buffer, MAX_LINE_LENGTH - 1, stdin) != NULL ) {
-
-      wmove(stdscr, height, 0 );
-
-      /* clear the line */
-      clrtoeol();  
-
-    /* print the error */
-    wprintw( stdscr, "Sorry, the screen height is %d  the width is %d : MAX_LINE_NUMBER is %d and MAX_LINE_LENGTH is %d \n", 
-              height,
-              width, 
-              MAX_LINE_NUMBER,
-              MAX_LINE_LENGTH 
-            );
-    
-    /* Refresh the screen */
-    wrefresh(stdscr);
-    
-    exit(1);
+  
+  return;
   }
 
   while(1)
@@ -130,6 +108,6 @@ char  buffer[MAX_LINE_LENGTH] ;   /* line buffer   /* Quit if no arguments are p
   
   endwin();
 
-  exit(0);
+  return;
 
 } /* end of main () */
