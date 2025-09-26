@@ -8,7 +8,7 @@
 *       2. Second release after testing the changes made from V1
 *       3. Changed back to read from stdin instead of file 09-25-2025
 *       
-* Usage example: tail -f "foo" | liat 
+* Usage example: tail -f <some_file_name> liat 
 *
 * ************************************************************************* */
 
