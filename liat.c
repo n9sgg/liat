@@ -29,7 +29,7 @@ int   height = 0, width = 0;
 void main(int argc, char **argv)
 {
 
-char  buffer[MAX_LINE_LENGTH] ;   /* line buffer   Quit if no arguments are passed. */
+char  buffer[MAX_LINE_LENGTH] ;   /* line buffer */
 int   x         = 0 ;
 int   q         = 0 ;
 
