@@ -6,7 +6,7 @@
 * History:
 *       1. First beta release - 04-30-2019
 *       2. Second release after testing the changes made from V1
-*       3. Changed to read from stdin instead of file
+*       3. Changed backed to read from stdin instead of file 09-25-2025
 * Usage: echo "foo" | liat 
 * ************************************************************************* */
 
