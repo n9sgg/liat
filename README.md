@@ -1,6 +1,6 @@
 liat - list it at the top
 
-code for an application that Lists It At the Top
+Code for an application that Lists It At the Top
 
 Think about liat as the unix tail utility in reverse.
 
