@@ -10,7 +10,7 @@ liat uses the ncurses library and header files.
 
 If you do not have ncurses you can install it on ubuntu like below.
 
-sudo apt-get install libncurses5-dev libncursesw5-dev
+> sudo apt-get install libncurses5-dev libncursesw5-dev
 
 To compile liat at the bash prompt ...
 
