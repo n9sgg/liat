@@ -19,4 +19,4 @@ To compile liat at the bash prompt ...
 
 liat reads from stdin. To use liat try the following
 
-tail -f <some_file_name> | liat 
+> tail -f <some_file_name> | liat 
